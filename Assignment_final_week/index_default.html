@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title></title>
+
+    <!--Import bootstrap-->
+    <link href="css/bootstrap.css"
+          rel="stylesheet">
+
+     <!--Import my own stylesheet-->     
+    <link href="css/stylesheet.css" 
+          rel="stylesheet">
+
+    <!-- import jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+        <!--navigation bar begins-->
+        <nav class="navbar navbar-default"> 
+          <div class="container-fluid"> 
+          <!-- collasped navigation bar begins-->
+            <div class="navbar-header"> 
+              <button 
+                type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#main_navbar"
+                aria-expanded="false"
+                style="color: white">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+          <!-- / collasped navigation bar ends-->
+
+          <!-- normal navigation bar begins-->  
+            <div  class=" collapse navbar-collapse"
+                  id="main_navbar" >
+
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index_default.html" >Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact Me </a></li>
+              </ul>
+
+            </div>
+          <!-- normal navigation bar ends -->
+          
+          </div>
+        </nav>
+        <!-- / navigation bar ends-->
+
+        <!-- starts of main container -->
+        <div class="container"> 
+            <marquee><h1 class="text_style"> Welcome to <b><i>My Page</i></b></h1></marquee>
+        </div>
+
+        <div>
+    
+            <!-- Opens an alert box-->
+
+            <button id="title" onclick="alert('This page describes my thought and views. Click on the boxes at the left side of your screen to know me.');" >
+              Click Me</button><br>
+              </div>
+          <div class="grow pic">
+                  <img src="./images/schedule.jpg" alt="schedule" /> Hover on the image to Zoom
+              </div>
+
+            <!-- starts of breadcrumb-->
+              <div class="conatiner-fluid"> 
+                <ol class="breadcrumb">
+                  <li class="active"><a href="index_default.html"> Home</a></li>
+                </ol>
+              </div>
+            <!-- / breadcrumb-->
+          
+            <!-- starts of area for content display-->  
+              <div class="row"> 
+          
+                <div class="col-md-3 "> 
+                  <!-- this side table displays information about me--> 
+                  
+                  <div id="row0"
+                       class="crop-img"><h4>Education:</h4>
+<i>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include storytelling, discussion, teaching, training, and directed research. Education frequently takes place under the guidance of educators, but learners may also educate themselves. Education can take place in formal or informal settings and any experience that has a formative effect on the way one thinks, feels, or acts may be considered educational. The methodology of teaching is called pedagogy.
+
+Education commonly is divided formally into such stages as preschool or kindergarten, primary school, secondary school and then college, university, or apprenticeship.<br>
+
+I did my high school from the <b>MY HighSchool Senior School.</b>
+I did my under-graduation from the<b> Under-Graduation School.</b></i> 
+
+
+                  </div>
+                  
+                  <div id="row1"
+                       class="crop-img"><h4>Family</h4>
+My thoughts on family:<i><b>Family means no one gets left behind or forgotten.</b></i>
+                  </div>
+                  
+                  <div id="row2"
+                       class="crop-img"><h4>Goals:</h4>
+My belief:<i><b>What you get by achieving your goals is not as important as what you become by achieving your goals.</b></i>
+
+                  </div> 
+
+                  <div id="row3"
+                       class="crop-img"><h4>Hobbies:</h4>
+These are my hobbies
+<ul>
+<li> Cooking: This is an image of a recipe book.&nbsp&nbsp
+<img class="imgview" src="./images/recipe.jpg" alt="recipe book"/> </li>
+<li> Shopping: There is an image of a shopping girl.
+<img class="imgview" src="./images/shopping-1.jpg" alt="shopping girl"/> </li>
+
+
+                  </div>
+
+                  <div id="row4"
+                       class="crop-img"><h4>Feedback Form:</h4>
+<form>
+  <fieldset>
+    First Name:<br> <input type="text"
+                   name="first"
+                   id="fname"
+                   value=""
+                   /><br><br>
+
+Last Name:<br> <input type="text"
+                   name="second"
+                   id="lname"
+                   value=""/><br><br>
+
+Password:<br> <input type="password"><br><br>
+
+Contact #:<br> <input type="number"><br><br>
+
+Gender:<br> <input type="radio" name="gender"/> Male<br>
+        <input type="radio" name="gender"/> Female<br><br>
+
+<input type="button" value="SUBMIT" onclick="alert('Thanks for feedback');">
+
+</fieldset>
+</form> 
+                </div>
+        
+
+                </div>
+                <!-- End of the side table and content-->
+                
+                <!-- Backwarrd button-->
+                 <div class="col-md-1"><button id="backward">&lt;</button>
+                 </div>
+                
+
+                  <!-- This displays the content of the side table-->
+                <div class="col-md-7">
+                  <div class="well" id="mainViewer" >
+                  </div>
+
+                </div>
+                            
+                <!-- forward button-->
+                <div class="col-md-1"><button id="forward">&gt;</button>
+                </div>
+            
+                
+            </div>
+        </div>
+        
+        <script>
+
+            var count=0;
+
+            $(".crop-img").click(function(){        // By this function when you click on the content of the 
+
+              $("#mainViewer").html(                //side table, the content will be diplay on the full screen
+              $(this).html());
+
+            var id=$(this).attr("id");
+
+            count = parseInt(id.slice(-1));
+
+            }) ;
+    
+
+            $("#row"+count).click();              // by default show the content of the tables's first row
+
+            $("#backward").click(function (){     // when click backward it shows previous row content
+      // go back one in the counter
+      count = count - 1;
+      // if we are below 1 (the first
+      // image) loop round to 4 (the
+      // last image)
+      if(count < 0){
+        count = $(".crop-img").length-1;
+      }
+      // virtually click on the current
+      // content to load it into the big screen
+      $("#row"+count).click();
+    });
+
+        
+          $("#forward").click(function (event){
+      // go forward one in the counter
+      count = count + 1;
+      // if we are above 4 (the last
+      // image) loop round to 1 (the
+      // first image)
+      if(count >=$(".crop-img").length){
+        count = 0;
+      }
+      // virtually click on the current
+      // content to load it into the big screen
+      $("#row"+count).click();
+    });
+         
+
+    
+
+     </script>      
+            
+
+        
+               
+      
+    
+
+          
+            
+                    
+
+        
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

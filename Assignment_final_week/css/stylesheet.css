@@ -1,0 +1,58 @@
+/* use this to put borders around things... */
+.crop-img{
+  margin-top: 10px;
+  padding-left: 10px;  
+  white-space : pre; 	 /* preserve the original line breaks*/
+  overflow : hidden;   /* to wordwrap the text */
+  max-height: 150px;  
+  height : 150px;     
+  border-radius: 10px;
+  border:2px solid gray;
+}
+
+#large-view {
+  margin-top: 10px;   
+  white-space : pre;   /* preserve the original line breaks */
+}
+.imgview{ 
+ 
+ max-height:150px;
+  max-width:100%;
+  margin-bottom: 10px;
+	
+}
+.buttons{
+
+	border-radius: 50px solid gray;
+	margin-top:125%;
+}
+
+.grow img {
+  height: 100px;
+  width: 100px;
+  }
+
+  .grow img:hover {
+  width: 500px;
+  height: 500px;
+}
+
+.text_style{
+	font-size: 40px;
+	font-style: serif;
+	color: blue;
+	text-shadow: 15px;
+
+}
+
+.newlayout{
+	background-color: yellow;
+	border:2px solid gray;
+	padding:10px 40px;
+	width:300px;
+	border-radius: 25px;
+	box shadow: 10px 10px 5px #888888;
+}
+
+
+
